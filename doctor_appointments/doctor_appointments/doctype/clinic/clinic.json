@@ -13,7 +13,8 @@
   "route",
   "column_break_kljg",
   "is_published",
-  "address"
+  "address",
+  "doctor"
  ],
  "fields": [
   {
@@ -43,13 +44,19 @@
   {
    "fieldname": "column_break_kljg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor"
   }
  ],
  "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2023-07-12 16:21:08.075834",
+ "modified": "2023-07-12 17:06:01.947850",
  "modified_by": "Administrator",
  "module": "Doctor Appointments",
  "name": "Clinic",

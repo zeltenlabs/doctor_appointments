@@ -12,8 +12,7 @@
   "qualifications",
   "full_name",
   "column_break_ryig",
-  "speciality",
-  "shifts"
+  "speciality"
  ],
  "fields": [
   {
@@ -47,19 +46,13 @@
    "reqd": 1
   },
   {
-   "fieldname": "shifts",
-   "fieldtype": "Table",
-   "label": "Shifts",
-   "options": "Shift"
-  },
-  {
    "fieldname": "column_break_ryig",
    "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-12 16:45:26.097011",
+ "modified": "2023-07-12 17:37:40.507601",
  "modified_by": "Administrator",
  "module": "Doctor Appointments",
  "name": "Doctor",
