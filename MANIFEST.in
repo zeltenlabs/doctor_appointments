@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include doctor_appointments *.css
+recursive-include doctor_appointments *.csv
+recursive-include doctor_appointments *.html
+recursive-include doctor_appointments *.ico
+recursive-include doctor_appointments *.js
+recursive-include doctor_appointments *.json
+recursive-include doctor_appointments *.md
+recursive-include doctor_appointments *.png
+recursive-include doctor_appointments *.py
+recursive-include doctor_appointments *.svg
+recursive-include doctor_appointments *.txt
+recursive-exclude doctor_appointments *.pyc
