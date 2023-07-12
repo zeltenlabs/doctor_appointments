@@ -1,51 +1,54 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-07-12 17:36:13.142409",
+ "creation": "2023-07-12 19:47:51.716734",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "start_time",
-  "end_time",
-  "title",
-  "clinic"
+  "date",
+  "clinic",
+  "shift",
+  "queue"
  ],
  "fields": [
   {
-   "fieldname": "start_time",
-   "fieldtype": "Time",
+   "fieldname": "date",
+   "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Start Time",
-   "reqd": 1
-  },
-  {
-   "fieldname": "end_time",
-   "fieldtype": "Time",
-   "in_list_view": 1,
-   "label": "End Time",
+   "label": "Date",
    "reqd": 1
   },
   {
    "fieldname": "clinic",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Clinic",
    "options": "Clinic",
    "reqd": 1
   },
   {
-   "fieldname": "title",
-   "fieldtype": "Data",
-   "label": "Title"
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shift",
+   "options": "Schedule Shift",
+   "reqd": 1
+  },
+  {
+   "fieldname": "queue",
+   "fieldtype": "Table",
+   "label": "Queue",
+   "options": "Session Item"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-12 18:50:49.437104",
+ "modified": "2023-07-12 19:51:22.719329",
  "modified_by": "Administrator",
  "module": "Doctor Appointments",
- "name": "Schedule Shift",
+ "name": "Session",
  "owner": "Administrator",
  "permissions": [
   {
@@ -61,9 +64,10 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "title"
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

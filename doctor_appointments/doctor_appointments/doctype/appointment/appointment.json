@@ -13,6 +13,7 @@
   "queue_number",
   "column_break_vvbo",
   "date",
+  "shift",
   "clinic",
   "amended_from"
  ],
@@ -62,12 +63,19 @@
   {
    "fieldname": "column_break_vvbo",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Link",
+   "label": "Shift",
+   "options": "Schedule Shift",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-12 17:26:03.192589",
+ "modified": "2023-07-12 19:53:13.546198",
  "modified_by": "Administrator",
  "module": "Doctor Appointments",
  "name": "Appointment",
@@ -88,9 +96,11 @@
   }
  ],
  "quick_entry": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "patient_name",
  "track_changes": 1,
  "track_seen": 1,
  "track_views": 1

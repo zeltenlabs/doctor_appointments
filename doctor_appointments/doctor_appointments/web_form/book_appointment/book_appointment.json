@@ -18,7 +18,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2023-07-12 18:33:14.054201",
+ "modified": "2023-07-12 20:15:56.546098",
  "modified_by": "Administrator",
  "module": "Doctor Appointments",
  "name": "book-appointment",
@@ -30,8 +30,22 @@
  "show_sidebar": 0,
  "success_message": "Thank you for booking appointment, TODO: Display the queue number assigned to them",
  "success_title": "Appointment Booked",
+ "success_url": "/success_with_queue_number?queue_number=2",
  "title": "Book Appointment",
  "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "clinic",
+   "fieldtype": "Link",
+   "hidden": 0,
+   "label": "Clinic",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Clinic",
+   "read_only": 0,
+   "reqd": 1,
+   "show_in_filter": 0
+  },
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "patient_name",
@@ -70,13 +84,13 @@
   },
   {
    "allow_read_on_all_link_options": 0,
-   "fieldname": "clinic",
+   "fieldname": "shift",
    "fieldtype": "Link",
    "hidden": 0,
-   "label": "Clinic",
+   "label": "Shift",
    "max_length": 0,
    "max_value": 0,
-   "options": "Clinic",
+   "options": "Schedule Shift",
    "read_only": 0,
    "reqd": 1,
    "show_in_filter": 0
