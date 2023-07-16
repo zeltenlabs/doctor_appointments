@@ -8,9 +8,19 @@ from frappe.model.document import Document
 class Appointment(Document):
 	def after_insert(self):
 		# add the appointment to the session as a new session item
-		print("your queue number:",self.add_to_session())
+		self.queue_number = self.add_to_session()
+		self.save(ignore_permissions=True)
 	def add_to_session(self):
-		session = frappe.get_doc("Session", {"date": self.date, "shift": self.shift, "clinic": self.clinic})
+		filters= {"date": self.date, "shift": self.shift, "clinic": self.clinic}
+		session_exists = frappe.db.exists("Session", filters)
+		if session_exists:
+			session = frappe.get_doc("Session", session_exists)
+		else :
+			session = frappe.new_doc("Session")
+			session.update(filters)
+			session.save(ignore_permissions=True)
+
+
 
 		session.append("queue", {
 			"appointment": self.name,

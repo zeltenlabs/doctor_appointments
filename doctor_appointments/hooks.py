@@ -128,23 +128,11 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"doctor_appointments.tasks.all"
-#	],
-#	"daily": [
-#		"doctor_appointments.tasks.daily"
-#	],
-#	"hourly": [
-#		"doctor_appointments.tasks.hourly"
-#	],
-#	"weekly": [
-#		"doctor_appointments.tasks.weekly"
-#	],
-#	"monthly": [
-#		"doctor_appointments.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+	"daily": [
+		"doctor_appointments.doctor_appointments.doctype.session.create_sessions"
+	]
+}
 
 # Testing
 # -------
