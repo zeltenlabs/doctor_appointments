@@ -9,7 +9,10 @@ class Appointment(Document):
 	def after_insert(self):
 		# add the appointment to the session as a new session item
 		self.queue_number = self.add_to_session()
+		# attach csrf token + queue number as key and quque number as value
+		frappe.cache().set_value(f"{frappe.session.id}:queue_number", self.queue_number)
 		self.save(ignore_permissions=True)
+
 	def add_to_session(self):
 		filters= {"date": self.date, "shift": self.shift, "clinic": self.clinic}
 		session_exists = frappe.db.exists("Session", filters)
@@ -19,8 +22,6 @@ class Appointment(Document):
 			session = frappe.new_doc("Session")
 			session.update(filters)
 			session.save(ignore_permissions=True)
-
-
 
 		session.append("queue", {
 			"appointment": self.name,
