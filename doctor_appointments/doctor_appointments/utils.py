@@ -16,8 +16,8 @@ def send_test_message(body, from_, to):
     client = get_twillio_client()
     message = client.messages.create(
         body=body,
-        from_="+19896237939",
-        to="+919697964142"
+        from_=from_,
+        to=to
     )
     try:
         frappe.get_doc({"Appointment SMS Log": {

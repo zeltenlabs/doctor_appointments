@@ -14,7 +14,8 @@
   "column_break_kljg",
   "is_published",
   "address",
-  "doctor"
+  "doctor",
+  "doctor_in"
  ],
  "fields": [
   {
@@ -50,6 +51,12 @@
    "fieldtype": "Link",
    "label": "Doctor",
    "options": "Doctor"
+  },
+  {
+   "default": "0",
+   "fieldname": "doctor_in",
+   "fieldtype": "Check",
+   "label": "Doctor In"
   }
  ],
  "has_web_view": 1,
@@ -61,7 +68,7 @@
    "link_fieldname": "clinic"
   }
  ],
- "modified": "2023-07-16 12:50:44.194182",
+ "modified": "2023-07-18 16:14:45.264235",
  "modified_by": "Administrator",
  "module": "Doctor Appointments",
  "name": "Clinic",
@@ -84,6 +91,5 @@
  "route": "clinics",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": [],
- "track_changes": 1
+ "states": []
 }
