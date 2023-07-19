@@ -16,6 +16,7 @@ class TestAppointment(FrappeTestCase):
 			"shift": shift.name,
 			"date": "202-08-01",
 			"patient_name": "Test Patient",
+			"contact_number": "+919697964142"
 		}).insert()
 		self.assertEqual(appointment.queue_number, 1)
 
@@ -25,6 +26,7 @@ class TestAppointment(FrappeTestCase):
 			"shift": shift.name,
 			"date": "202-08-01",
 			"patient_name": "Test Patient",
+			"contact_number": "+919697964142"
 		}).insert()
 		
 		self.assertEqual(appointment.queue_number, 2)
